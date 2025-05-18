@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Previtta</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="#hero" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Previtta</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="registerCli.html">Sou Cliente</a>
+      <a class="btn-getstarted" href="registerTec.html">Sou Técnico</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2 data-aos="fade-up">Conectando soluções, construindo confiança</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+              O Previtta oferece visitas técnicas preventivas, plano personalizado de manutenção e conexão com
+              profissionais qualificados para resolver problemas antes que eles aconteçam.
+            </p>
+
+            <div class="d-flex gap-3 mt-3" data-aos="fade-up" data-aos-delay="200">
+              <a href="registerCli.html" class="btn btn-primary">Sou Cliente</a>
+              <a href="registerTec.html" class="btn btn-outline-light">Sou Técnico</a>
+            </div>
+
+            <div class="row gy-4 mt-4" data-aos="fade-up" data-aos-delay="300">
+
+              <div class="col-lg-4 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="32"
+                    data-purecounter-duration="1">32</span>
+                  <p>Casas avaliadas</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="14"
+                    data-purecounter-duration="1">14</span>
+                  <p>Problemas antecipados</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-12">
+                <div class="stats-item text-center w-100 h-100">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="8"
+                    data-purecounter-duration="1">8</span>
+                  <p>Profissionais interessados</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="Ilustração manutenção preventiva">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-house-circle-check"></i></div>
+            <div>
+              <h4 class="title">Visita Técnica Preventiva</h4>
+              <p class="description">Um especialista vai até sua casa para identificar riscos invisíveis, como
+                infiltrações, falhas elétricas e desgaste estrutural.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h4 class="title">Plano de Manutenção</h4>
+              <p class="description">Você recebe um cronograma com datas e alertas para cuidar de cada parte da sua casa
+                de forma organizada e previsível.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-users-gear"></i></div>
+            <div>
+              <h4 class="title">Rede de Prestadores Homologados</h4>
+              <p class="description">Encontre e contrate profissionais confiáveis direto pela plataforma, com base em
+                avaliações e especialidades.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
+            data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="Ilustração de manutenção residencial">
+          </div>
+
+          <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
+            <h3>Sobre o Previtta</h3>
+            <p>
+              Cuidar da sua casa não precisa mais ser uma dor de cabeça. O Previtta nasceu para transformar a forma como
+              lidamos com a manutenção residencial — saindo do improviso e entrando na prevenção.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-shield-check"></i>
+                <div>
+                  <h5>Mais segurança e economia</h5>
+                  <p>Identificamos e prevenimos problemas antes que virem prejuízo — como curtos, infiltrações ou
+                    quebras inesperadas.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-clipboard-data"></i>
+                <div>
+                  <h5>Organização e histórico técnico</h5>
+                  <p>Você acompanha tudo: histórico de vistorias, laudos, garantias e lembretes de manutenção.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-person-workspace"></i>
+                <div>
+                  <h5>Profissionais qualificados e confiáveis</h5>
+                  <p>Contamos com uma rede própria e homologada de técnicos especializados, com avaliação dos clientes.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Serviços</span>
+        <h2>O que o Previtta faz por você</h2>
+        <p>Cuidamos da sua casa antes que o problema apareça. Veja como ajudamos você a viver com mais segurança,
+          organização e tranquilidade.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-1.jpg" alt="Técnico realizando vistoria residencial"
+                  class="img-fluid">
+              </div>
+              <h3>Visita Técnica Preventiva</h3>
+              <p>Um técnico especializado avalia sua casa periodicamente para identificar riscos em áreas como elétrica,
+                hidráulica, telhado e estrutura.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-plano.jpg" alt="Agenda de manutenção com lembretes" class="img-fluid">
+              </div>
+              <h3>Plano de Manutenção Inteligente</h3>
+              <p>Receba um plano personalizado com o que revisar, quando revisar e alertas para te lembrar de cada etapa
+                — tudo salvo no histórico do imóvel.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-profissionais.jpg" alt="Profissionais homologados" class="img-fluid">
+              </div>
+              <h3>Rede de Profissionais Qualificados</h3>
+              <p>Precisa executar uma manutenção? Conte com prestadores de confiança, avaliados e homologados
+                diretamente pela nossa equipe técnica.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-garantias.jpg" alt="Documentos digitais e garantia" class="img-fluid">
+              </div>
+              <h3>Organização de Garantias e Laudos</h3>
+              <p>Armazene digitalmente seus relatórios técnicos, notas fiscais e garantias em um só lugar. Chega de
+                perder documentos importantes.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-alertas.jpg" alt="Smartphone com alerta de manutenção" class="img-fluid">
+              </div>
+              <h3>Alertas e Lembretes Automatizados</h3>
+              <p>Você será lembrado quando for hora de revisar algo importante. O Previtta cuida das datas, você só
+                precisa autorizar e acompanhar.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-historico.jpg" alt="Tela de histórico técnico da casa" class="img-fluid">
+              </div>
+              <h3>Histórico Técnico da Residência</h3>
+              <p>Acompanhe tudo que já foi feito na sua casa. Isso valoriza seu imóvel e facilita negociações, reformas
+                ou futuras vendas.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="section-title text-white text-center mb-4">
+          <h2>O que estão dizendo sobre o Previtta</h2>
+          <p>Veja a opinião de quem validou nossa solução e já percebe o valor da manutenção preventiva.</p>
+        </div>
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Juliane P.</h3>
+                <h4>Moradora - Chapecó/SC</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Ter alguém que me diga o que revisar na casa e quando fazer isso é um alívio. Com o Previtta,
+                    sei que não vou ser pega de surpresa por um vazamento ou curto.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Douglas R.</h3>
+                <h4>Proprietário - Imóvel Próprio</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>O plano que recebi depois da visita técnica me ajudou a organizar tudo: pintura, revisão do
+                    telhado, troca de disjuntores... excelente iniciativa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Vanessa L.</h3>
+                <h4>Cliente em validação</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Gostei muito da proposta! Ser avisada quando for hora de revisar a elétrica ou o aquecedor me dá
+                    mais confiança em manter minha casa em dia.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Dúvidas Frequentes</span>
+        <h2>Perguntas que podem surgir</h2>
+        <p>Respondemos abaixo as principais dúvidas sobre o funcionamento do Previtta, seus serviços e como começar a
+          usar.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O Previtta já está disponível para contratação?</h3>
+                <div class="faq-content">
+                  <p>Estamos em fase de validação e expansão! Você pode deixar seus dados para ser avisado assim que o
+                    serviço estiver ativo na sua cidade.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Preciso pagar para receber a visita técnica?</h3>
+                <div class="faq-content">
+                  <p>Durante o MVP, a visita técnica é gratuita em cidades participantes. Após a fase de testes, será
+                    cobrada uma taxa acessível com possibilidade de assinatura mensal.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O Previtta também executa os reparos?</h3>
+                <div class="faq-content">
+                  <p>Nós conectamos você com prestadores de serviço qualificados e avaliados. A decisão de contratação e
+                    o orçamento é feito diretamente com o técnico.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Que tipos de problemas o Previtta ajuda a prevenir?</h3>
+                <div class="faq-content">
+                  <p>Infiltrações, curto-circuitos, vazamentos, trincas, problemas no telhado, falhas em bombas e
+                    equipamentos — tudo que pode virar dor de cabeça quando não é acompanhado.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Posso acompanhar o histórico de manutenção da minha casa?</h3>
+                <div class="faq-content">
+                  <p>Sim! Cada visita gera um relatório técnico e todos os laudos, datas e recomendações ficam salvos no
+                    seu painel. Assim, sua casa tem um histórico valorizado e organizado.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background text-white">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <span class="sitename">Previtta</span>
+          </a>
+          <p>
+            O Previtta é uma plataforma de manutenção preventiva para casas e apartamentos de médio e alto padrão.
+            Organizamos, alertamos e conectamos você a profissionais qualificados, cuidando da sua casa antes que o
+            problema apareça.
+          </p>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:contato@previtta.com"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+            <li><a href="#form-cliente">Sou Morador</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Profissionais</h4>
+          <ul>
+            <li><a href="#form-tecnico">Quero me cadastrar</a></li>
+            <li><a href="#services">Como funciona</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Fale com a gente</h4>
+          <p>Chapecó - SC</p>
+          <p>Brasil</p>
+          <p class="mt-3"><strong>Email:</strong> <span>contato@previtta.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; 2025 <strong class="px-1 sitename">Previtta</strong> — Todos os direitos reservados.</p>
+      <div class="credits">
+        Desenvolvido no Startup Weekend Construtech
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

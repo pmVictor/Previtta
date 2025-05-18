@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente - Previtta</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Cadastro de Cliente</h2>
+    <form id="form-cliente">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone / WhatsApp</label>
+        <input type="tel" class="form-control" id="telefone" name="telefone">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tipo de imóvel</label>
+        <select class="form-select" name="tipo_imovel">
+          <option value="Casa">Casa</option>
+          <option value="Apartamento">Apartamento</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">O imóvel é:</label>
+        <select class="form-select" name="propriedade">
+          <option value="Próprio">Próprio</option>
+          <option value="Alugado">Alugado</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade / Estado</label>
+        <input type="text" class="form-control" id="cidade" name="cidade">
+      </div>
+      <div class="mb-3">
+        <label for="descricao_problema" class="form-label">Você já teve problemas que exigiram manutenção?
+          Quais?</label>
+        <textarea class="form-control" id="descricao_problema" name="descricao_problema" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Quais tipos de serviço você gostaria de ter acesso em uma plataforma como a
+          Previtta?</label>
+        <textarea class="form-control" name="servicos_desejados" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">O que você gostaria que a Previtta oferecesse para facilitar o cuidado com sua
+          casa?</label>
+        <textarea class="form-control" name="recursos_desejados" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Como você costuma resolver problemas de manutenção atualmente?</label>
+        <textarea class="form-control" name="como_resolve" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Comentário livre sobre a proposta da Previtta (o que achou, o que gostaria de ver,
+          sugestões):</label>
+        <textarea class="form-control" name="comentario" rows="3"></textarea>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="autorizacao" id="autorizacao" required>
+        <label class="form-check-label" for="autorizacao">
+          Autorizo o uso dos meus dados para contato e testes do projeto.
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+    </form>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script>
+  document.getElementById("form-cliente").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    console.log("Enviando dados ao Google Sheets...");
+
+    const data = {};
+    const formData = new FormData(this);
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    fetch("https://script.google.com/macros/s/AKfycbwk0X6N91j1T6RUnGVvDDc2o9ekaDOxS24ydgYuf90EEOSQWgWlnb0VZvCN-T-K0RNc/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "agradecimento.html"; // redireciona após sucesso
+        } else {
+          alert("Erro ao enviar cadastro.");
+        }
+      })
+
+  });
+</script>
+
+</html>

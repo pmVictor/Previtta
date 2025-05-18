@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Técnico - Previtta</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Cadastro de Técnico</h2>
+        <form id="form-tecnico">
+            <div class="mb-3">
+                <label class="form-label">Nome completo</label>
+                <input type="text" class="form-control" name="nome">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Telefone / WhatsApp</label>
+                <input type="tel" class="form-control" name="telefone">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Quais serviços realiza?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="servicos[]" value="Elétrica">
+                    <label class="form-check-label">Elétrica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="servicos[]" value="Hidráulica">
+                    <label class="form-check-label">Hidráulica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="servicos[]" value="Pintura">
+                    <label class="form-check-label">Pintura</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="servicos[]" value="Telhado">
+                    <label class="form-check-label">Telhado</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="servicos[]" value="Manutenção geral">
+                    <label class="form-check-label">Manutenção geral</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Você atua como:</label>
+                <select class="form-select" name="tipo_profissional">
+                    <option value="Autônomo">Autônomo</option>
+                    <option value="Empresa prestadora">Empresa prestadora</option>
+                    <option value="Técnico certificado">Técnico certificado</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cidades onde atua</label>
+                <input type="text" class="form-control" name="cidades">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tempo de experiência</label>
+                <input type="text" class="form-control" name="experiencia">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Certificações técnicas</label>
+                <input type="text" class="form-control" name="certificacoes">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gostaria de receber serviços pela plataforma?</label>
+                <select class="form-select" name="interesse">
+                    <option value="Sim">Sim</option>
+                    <option value="Gostaria de saber mais">Gostaria de saber mais</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">O que você acha da proposta do Previtta?</label>
+                <textarea class="form-control" name="opiniao_previtta" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">O que você gostaria de ver na plataforma (funcionalidades, tipos de chamada,
+                    formas de pagamento, etc)?</label>
+                <textarea class="form-control" name="sugestoes_tecnico" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Comentário livre (opcional)</label>
+                <textarea class="form-control" name="comentario" rows="3"></textarea>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" name="autorizacao_tecnico" id="autorizacao_tecnico"
+                    required>
+                <label class="form-check-label" for="autorizacao_tecnico">
+                    Autorizo contato e uso das informações para fins de triagem técnica.
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success">Cadastrar Técnico</button>
+        </form>
+    </div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+    document.getElementById("form-tecnico").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const data = { tipo_formulario: "tecnico" };
+        const formData = new FormData(this);
+        formData.forEach((value, key) => {
+            if (data[key]) {
+                data[key] += `, ${value}`;
+            } else {
+                data[key] = value;
+            }
+        });
+
+        fetch("https://script.google.com/macros/s/AKfycbwk0X6N91j1T6RUnGVvDDc2o9ekaDOxS24ydgYuf90EEOSQWgWlnb0VZvCN-T-K0RNc/exec", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "agradecimento.html";
+                } else {
+                    alert("Erro ao enviar cadastro.");
+                }
+            })
+
+    });
+</script>
+
+</html>
