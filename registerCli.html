@@ -84,15 +84,19 @@
   document.getElementById("form-cliente").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    console.log("Enviando dados ao Google Sheets...");
-
-    const data = {};
+    const data = { tipo_formulario: "cliente" }; // para diferenciar no Apps Script
     const formData = new FormData(this);
     formData.forEach((value, key) => {
-      data[key] = value;
+      if (data[key]) {
+        data[key] += `, ${value}`; // para checkboxes múltiplos
+      } else {
+        data[key] = value;
+      }
     });
 
-    fetch("https://script.google.com/macros/s/AKfycbwk0X6N91j1T6RUnGVvDDc2o9ekaDOxS24ydgYuf90EEOSQWgWlnb0VZvCN-T-K0RNc/exec", {
+    console.log("Enviando dados (cliente):", data);
+
+    fetch("https://script.google.com/macros/s/AKfycbw1AGelgQS1kJUnzBYmYwBAz7HLtOZYP_YfjptCnWBqh0KYcQIgznVsCBBpbVfnYWzf/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -101,13 +105,16 @@
     })
       .then(response => {
         if (response.ok) {
-          window.location.href = "agradecimento.html"; // redireciona após sucesso
+          window.location.href = "agradecimento.html";
         } else {
           alert("Erro ao enviar cadastro.");
         }
       })
-
+      .catch(error => {
+        alert("Erro de conexão: " + error.message);
+      });
   });
 </script>
+
 
 </html>

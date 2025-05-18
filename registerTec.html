@@ -103,35 +103,40 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
-    document.getElementById("form-tecnico").addEventListener("submit", function (e) {
-        e.preventDefault();
+  document.getElementById("form-tecnico").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const data = { tipo_formulario: "tecnico" };
-        const formData = new FormData(this);
-        formData.forEach((value, key) => {
-            if (data[key]) {
-                data[key] += `, ${value}`;
-            } else {
-                data[key] = value;
-            }
-        });
-
-        fetch("https://script.google.com/macros/s/AKfycbwk0X6N91j1T6RUnGVvDDc2o9ekaDOxS24ydgYuf90EEOSQWgWlnb0VZvCN-T-K0RNc/exec", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = "agradecimento.html";
-                } else {
-                    alert("Erro ao enviar cadastro.");
-                }
-            })
-
+    const data = { tipo_formulario: "tecnico" };
+    const formData = new FormData(this);
+    formData.forEach((value, key) => {
+      if (data[key]) {
+        data[key] += `, ${value}`;
+      } else {
+        data[key] = value;
+      }
     });
+
+    console.log("Enviando dados (técnico):", data);
+
+    fetch("https://script.google.com/macros/s/AKfycbw1AGelgQS1kJUnzBYmYwBAz7HLtOZYP_YfjptCnWBqh0KYcQIgznVsCBBpbVfnYWzf/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "agradecimento.html";
+        } else {
+          alert("Erro ao enviar cadastro.");
+        }
+      })
+      .catch(error => {
+        alert("Erro de conexão: " + error.message);
+      });
+  });
 </script>
+
 
 </html>
