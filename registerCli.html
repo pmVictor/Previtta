@@ -12,10 +12,25 @@
 <body>
   <div class="container py-5">
     <h2 class="text-center mb-4">Cadastro de Cliente</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzFHtZMP8QQAgsuRxbiWj_6o_kz50PyX83ZD--MF02h1iTnQ/viewform?embedded=true" width="1200" height="2640" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfzFHtZMP8QQAgsuRxbiWj_6o_kz50PyX83ZD--MF02h1iTnQ/viewform?embedded=true"
+      width="1200" height="2640" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
   </div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+<script>
+  const iframe = document.getElementById('form-frame');
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    const confirmationText = "Sua resposta foi registrada.";
+    const interval = setInterval(() => {
+      if (doc.body.innerText.includes(confirmationText)) {
+        clearInterval(interval);
+        window.location.href = "agradecimento.html";
+      }
+    }, 1000);
+  };
+</script>
 
 </html>
