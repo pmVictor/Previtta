@@ -16,6 +16,10 @@ Muitas pesosas enfrentam **dificuldade para encontrar mão de obra qualificada e
 
 ---
 
+## ▶️ Uso
+  
+Acesse "[Previtta.com](https://paludovictor.github.io/Previtta/)"
+
 ## 🛠 Tecnologias
 
 - **Backend**: Django  
