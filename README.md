@@ -1,70 +1,24 @@
-# 🏆 MVP: <NOME_DO_PROJETO>
+#  Previtta
 
-> Pequena descrição (em uma linha) do seu MVP e do problema que ele resolve.
-
----
-
-## 📋 Índice
-
-- [Sobre](#sobre)  
-- [Demonstração](#demonstração)  
-- [Funcionalidades](#funcionalidades)  
-- [Tecnologias](#tecnologias)  
-- [Arquitetura](#arquitetura)  
-- [Instalação](#instalação)  
-- [Uso](#uso)  
-- [Time](#time)  
-- [Próximos Passos](#próximos-passos)  
-- [Licença](#licença)  
-- [Contato](#contato)  
+> Conectando soluções, construindo confiança
 
 ---
 
 ## 🤔 Sobre
 
-Este repositório contém o MVP desenvolvido durante o **Startup Weekend Chapecó** (DATA), cujo objetivo foi criar uma solução para **<DESCREVER_PROBLEMA>**.  
-
-> “Elevator pitch” do seu projeto em até duas frases.
+O **Previtta** é um MVP desenvolvido durante o Startup Weekend Chapecó 2025 com o objetivo de facilitar o encontro entre empresas e profissionais qualificados e de confiança.
 
 ---
 
-## 🎥 Demonstração
+## 🛑 Problema
 
-Insira aqui um GIF ou link para vídeo/screenshot do fluxo principal do seu MVP:
-
-![Demonstração](docs/demo.gif)  
-
----
-
-## 🚀 Funcionalidades
-
-- **Funcionalidade 1** – breve descrição.  
-- **Funcionalidade 2** – breve descrição.  
-- **Funcionalidade 3** – breve descrição.  
+Muitas pesosas enfrentam **dificuldade para encontrar mão de obra qualificada e confiável**.
 
 ---
 
 ## 🛠 Tecnologias
 
-O projeto foi construído com as seguintes ferramentas:
+- **Backend**: Django  
+- **Frontend**: Bootstrap  
+- **Banco de dados**: PostgreSQL  
 
-- **Backend**: Django / Flask / Node.js / etc  
-- **Frontend**: React / Vue.js / HTML/CSS  
-- **Banco de dados**: PostgreSQL / MongoDB / SQLite  
-- **Deploy / Infra**: Heroku / Vercel / AWS  
-
----
-
-## 🏗 Arquitetura
-
-Breve diagrama ou descrição de como os componentes se comunicam (ex.: Frontend ↔ API ↔ Banco).  
-![Arquitetura](docs/arquitetura.png)  
-
----
-
-## 📥 Instalação
-
-1. Clone este repositório  
-   ```bash
-   git clone https://github.com/<SEU_USUARIO>/<REPO>.git
-   cd <REPO>
