@@ -26,7 +26,7 @@ Acesse "[Previtta.com](https://paludovictor.github.io/Previtta/)"
 
 Para visualizar nossa apresentação completa do Pitch Deck, acesse:
 
-[Abrir Pitch Deck (PDF)](docs/Previtta_Pitch_Deck.pdf)
+[Abrir Pitch Deck (PDF)](docs/pitch.pdf)
 
 ---
 
