@@ -56,7 +56,7 @@ Este projeto está licenciado sob a MIT License.
 
     GitHub: @PaudoVictor
 
-    LinkedIn: www.linkedin.com/in/victorpaludo
+    LinkedIn: [www.linkedin.com/in/victorpaludo](www.linkedin.com/in/victorpaludo)
 
     E-mail: victormpaludo@gmail.com
 
