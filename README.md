@@ -22,6 +22,14 @@ Acesse "[Previtta.com](https://paludovictor.github.io/Previtta/)"
 
 ---
 
+## 📑 Pitch Deck
+
+Para visualizar nossa apresentação completa do Pitch Deck, acesse:
+
+[Abrir Pitch Deck (PDF)](docs/Previtta_Pitch_Deck.pdf)
+
+---
+
 ## 🧑‍💻 Time
 
 Alana – Engenheira civil
